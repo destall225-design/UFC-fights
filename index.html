@@ -20,12 +20,14 @@
         inset: 0;
         z-index: 50;
         display: flex;
-        align-items: center;
+        align-items: start;
         justify-content: center;
         background-color: rgba(0, 0, 0, 0.9);
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.3s ease;
+        overflow-y: auto;
+        padding: 4rem 0;
       }
       .modal-overlay:target {
         opacity: 1;
@@ -46,7 +48,7 @@
     <header class="fixed top-0 left-0 right-0 z-40 bg-gradient-to-b from-black/80 to-transparent px-6 py-4 flex items-center justify-between">
       <div class="flex items-center gap-8">
         <div class="text-2xl font-display font-extrabold tracking-tighter text-white flex items-center gap-1">
-          <span class="bg-red-600 px-1.5 py-0.5 rounded-sm">VÄKEVÄ</span>
+          <span class="bg-red-600 px-1.5 py-0.5 rounded-sm">SUOMI</span>
           <span class="text-sm font-medium tracking-widest opacity-80 uppercase">MMA</span>
         </div>
         <nav class="hidden md:flex items-center gap-6">
@@ -70,7 +72,7 @@
     <section class="relative h-[85vh] w-full overflow-hidden">
       <div class="absolute inset-0 pointer-events-none">
         <div class="w-full h-full">
-          <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" class="opacity-60"></iframe>
+          <img src="https://i-viaplay-com.akamaized.net/viaplay-prod/319/608/26_327_2_L.jpg?width=1600&height=900" class="w-full h-full object-cover opacity-60" referrerpolicy="no-referrer">
         </div>
         <div class="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
@@ -78,11 +80,11 @@
 
       <div class="relative h-full flex flex-col justify-center px-6 md:px-12 max-w-4xl">
         <h1 class="text-5xl md:text-7xl font-display font-extrabold uppercase tracking-tight leading-[0.9] mb-6">
-          VÄKEVÄ MMA: <br />
-          <span class="text-white">NIGHT OF CHAMPIONS</span>
+          UFC 327<br />
+          <span class="text-white">Procházka vs. Ulberg ┃ Main card</span>
         </h1>
         <p class="text-lg md:text-xl text-white/80 max-w-xl mb-8 leading-relaxed">
-          Experience the power and intensity of Väkevä MMA. Relive the most explosive knockouts and technical submissions from our premier events.
+          UFC 327: Procházka vs. Ulberg was a mixed martial arts event produced by the Ultimate Fighting Championship that took place on April 11, 2026, at the Kaseya Center in Miami, Florida. 
         </p>
         <div class="flex flex-wrap gap-4">
           <a 
@@ -103,20 +105,18 @@
     <main class="relative z-10 -mt-20 pb-20 space-y-12 px-6 md:px-12">
       <!-- Row 1 -->
       <section>
-        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-white/60 mb-4">Upcoming Events</h2>
+        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-white/60 mb-4">Past Events</h2>
         <div class="flex gap-4 overflow-x-auto no-scrollbar pb-4 -mx-2 px-2 scroll-smooth snap-x snap-mandatory">
           
           <!-- Video Card 1 -->
           <a href="#v1" class="flex-none w-72 md:w-80 group relative aspect-video overflow-hidden rounded-sm bg-zinc-900 border border-white/5 hover:border-red-600/50 transition-all duration-300 snap-start">
-            <div style="padding-bottom:56.25%; position:relative; width: 100%" class="pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity">
-              <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
-            </div>
+            <img src="https://i-viaplay-com.akamaized.net/viaplay-prod/319/608/26_327_2_L.jpg?width=1600&height=900" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" referrerpolicy="no-referrer">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity pointer-events-none"></div>
             <div class="absolute top-3 right-3 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-bold flex items-center gap-1 border border-white/10 pointer-events-none">
-              <span class="text-red-500">●</span> 15.05.2026
+              <span class="text-red-500">●</span> 11.4.2026
             </div>
             <div class="absolute bottom-4 left-4 right-4 pointer-events-none">
-              <h3 class="text-sm font-bold uppercase tracking-wide group-hover:text-red-500 transition-colors truncate">Väkevä MMA 10: Helsinki</h3>
+              <h3 class="text-sm font-bold uppercase tracking-wide group-hover:text-red-500 transition-colors truncate">UFC 327 ┃ Procházka vs. Ulberg</h3>
             </div>
             <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
               <div class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center shadow-2xl scale-75 group-hover:scale-100 transition-transform duration-300">
@@ -127,12 +127,13 @@
 
           <!-- Video Card 2 -->
           <a href="#v2" class="flex-none w-72 md:w-80 group relative aspect-video overflow-hidden rounded-sm bg-zinc-900 border border-white/5 hover:border-red-600/50 transition-all duration-300 snap-start">
-            <div style="padding-bottom:56.25%; position:relative; width: 100%" class="pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity">
-              <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
-            </div>
+            <img src="https://i.ytimg.com/vi/66hXt4XtQkc/maxresdefault.jpg" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" referrerpolicy="no-referrer">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity pointer-events-none"></div>
+            <div class="absolute top-3 right-3 bg-black/60 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-bold flex items-center gap-1 border border-white/10 pointer-events-none">
+              <span class="text-red-500">●</span> 26.12.2025
+            </div>
             <div class="absolute bottom-4 left-4 right-4 pointer-events-none">
-              <h3 class="text-sm font-bold uppercase tracking-wide group-hover:text-red-500 transition-colors truncate">Championship Prelims</h3>
+              <h3 class="text-sm font-bold uppercase tracking-wide group-hover:text-red-500 transition-colors truncate">Ice Cage Fighting 6</h3>
             </div>
             <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
               <div class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center shadow-2xl scale-75 group-hover:scale-100 transition-transform duration-300">
@@ -143,12 +144,11 @@
 
           <!-- Video Card 3 -->
           <a href="#v3" class="flex-none w-72 md:w-80 group relative aspect-video overflow-hidden rounded-sm bg-zinc-900 border border-white/5 hover:border-red-600/50 transition-all duration-300 snap-start">
-            <div style="padding-bottom:56.25%; position:relative; width: 100%" class="pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity">
-              <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
-            </div>
+            <img src="https://i.ytimg.com/vi/lAxQ8E1kHPQ/maxresdefault.jpg" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" referrerpolicy="no-referrer">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity pointer-events-none"></div>
             <div class="absolute bottom-4 left-4 right-4 pointer-events-none">
-              <h3 class="text-sm font-bold uppercase tracking-wide group-hover:text-red-500 transition-colors truncate">Heavyweight Grand Prix</h3>
+              <span class="text-red-500">●</span> 6.9.2025
+              <h3 class="text-sm font-bold uppercase tracking-wide group-hover:text-red-500 transition-colors truncate">Ice Cage Fighting 5</h3>
             </div>
             <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
               <div class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center shadow-2xl scale-75 group-hover:scale-100 transition-transform duration-300">
@@ -159,9 +159,7 @@
 
           <!-- Video Card 4 -->
           <a href="#v4" class="flex-none w-72 md:w-80 group relative aspect-video overflow-hidden rounded-sm bg-zinc-900 border border-white/5 hover:border-red-600/50 transition-all duration-300 snap-start">
-            <div style="padding-bottom:56.25%; position:relative; width: 100%" class="pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity">
-              <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
-            </div>
+            <img src="https://i.ytimg.com/vi/66hXt4XtQkc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC839IeC2X6-laSawppcBvqCmMKVQ" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" referrerpolicy="no-referrer">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity pointer-events-none"></div>
             <div class="absolute bottom-4 left-4 right-4 pointer-events-none">
               <h3 class="text-sm font-bold uppercase tracking-wide group-hover:text-red-500 transition-colors truncate">Lightweight Showdown</h3>
@@ -175,9 +173,7 @@
 
           <!-- Video Card 5 -->
           <a href="#v5" class="flex-none w-72 md:w-80 group relative aspect-video overflow-hidden rounded-sm bg-zinc-900 border border-white/5 hover:border-red-600/50 transition-all duration-300 snap-start">
-            <div style="padding-bottom:56.25%; position:relative; width: 100%" class="pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity">
-              <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
-            </div>
+            <img src="https://i.ytimg.com/vi/66hXt4XtQkc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC839IeC2X6-laSawppcBvqCmMKVQ" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" referrerpolicy="no-referrer">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity pointer-events-none"></div>
             <div class="absolute bottom-4 left-4 right-4 pointer-events-none">
               <h3 class="text-sm font-bold uppercase tracking-wide group-hover:text-red-500 transition-colors truncate">Submission Underground</h3>
@@ -191,9 +187,7 @@
 
           <!-- Video Card 6 -->
           <a href="#v6" class="flex-none w-72 md:w-80 group relative aspect-video overflow-hidden rounded-sm bg-zinc-900 border border-white/5 hover:border-red-600/50 transition-all duration-300 snap-start">
-            <div style="padding-bottom:56.25%; position:relative; width: 100%" class="pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity">
-              <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
-            </div>
+            <img src="https://i.ytimg.com/vi/66hXt4XtQkc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC839IeC2X6-laSawppcBvqCmMKVQ" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" referrerpolicy="no-referrer">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity pointer-events-none"></div>
             <div class="absolute bottom-4 left-4 right-4 pointer-events-none">
               <h3 class="text-sm font-bold uppercase tracking-wide group-hover:text-red-500 transition-colors truncate">Road to Glory</h3>
@@ -215,9 +209,7 @@
           
           <!-- Video Card 7 -->
           <a href="#v7" class="flex-none w-72 md:w-80 group relative aspect-video overflow-hidden rounded-sm bg-zinc-900 border border-white/5 hover:border-red-600/50 transition-all duration-300 snap-start">
-            <div style="padding-bottom:56.25%; position:relative; width: 100%" class="pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity">
-              <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
-            </div>
+            <img src="https://i.ytimg.com/vi/66hXt4XtQkc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC839IeC2X6-laSawppcBvqCmMKVQ" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" referrerpolicy="no-referrer">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity pointer-events-none"></div>
             <div class="absolute bottom-4 left-4 right-4 pointer-events-none">
               <h3 class="text-sm font-bold uppercase tracking-wide group-hover:text-red-500 transition-colors truncate">Greatest Knockouts</h3>
@@ -231,9 +223,7 @@
 
           <!-- Video Card 8 -->
           <a href="#v8" class="flex-none w-72 md:w-80 group relative aspect-video overflow-hidden rounded-sm bg-zinc-900 border border-white/5 hover:border-red-600/50 transition-all duration-300 snap-start">
-            <div style="padding-bottom:56.25%; position:relative; width: 100%" class="pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity">
-              <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
-            </div>
+            <img src="https://i.ytimg.com/vi/66hXt4XtQkc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC839IeC2X6-laSawppcBvqCmMKVQ" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" referrerpolicy="no-referrer">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity pointer-events-none"></div>
             <div class="absolute bottom-4 left-4 right-4 pointer-events-none">
               <h3 class="text-sm font-bold uppercase tracking-wide group-hover:text-red-500 transition-colors truncate">Legendary Submissions</h3>
@@ -247,9 +237,7 @@
 
           <!-- Video Card 9 -->
           <a href="#v9" class="flex-none w-72 md:w-80 group relative aspect-video overflow-hidden rounded-sm bg-zinc-900 border border-white/5 hover:border-red-600/50 transition-all duration-300 snap-start">
-            <div style="padding-bottom:56.25%; position:relative; width: 100%" class="pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity">
-              <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
-            </div>
+            <img src="https://i.ytimg.com/vi/66hXt4XtQkc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC839IeC2X6-laSawppcBvqCmMKVQ" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" referrerpolicy="no-referrer">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity pointer-events-none"></div>
             <div class="absolute bottom-4 left-4 right-4 pointer-events-none">
               <h3 class="text-sm font-bold uppercase tracking-wide group-hover:text-red-500 transition-colors truncate">Title Defenses</h3>
@@ -263,9 +251,7 @@
 
           <!-- Video Card 10 -->
           <a href="#v10" class="flex-none w-72 md:w-80 group relative aspect-video overflow-hidden rounded-sm bg-zinc-900 border border-white/5 hover:border-red-600/50 transition-all duration-300 snap-start">
-            <div style="padding-bottom:56.25%; position:relative; width: 100%" class="pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity">
-              <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
-            </div>
+            <img src="https://i.ytimg.com/vi/66hXt4XtQkc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC839IeC2X6-laSawppcBvqCmMKVQ" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" referrerpolicy="no-referrer">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity pointer-events-none"></div>
             <div class="absolute bottom-4 left-4 right-4 pointer-events-none">
               <h3 class="text-sm font-bold uppercase tracking-wide group-hover:text-red-500 transition-colors truncate">Underground Fights</h3>
@@ -279,9 +265,7 @@
 
           <!-- Video Card 11 -->
           <a href="#v11" class="flex-none w-72 md:w-80 group relative aspect-video overflow-hidden rounded-sm bg-zinc-900 border border-white/5 hover:border-red-600/50 transition-all duration-300 snap-start">
-            <div style="padding-bottom:56.25%; position:relative; width: 100%" class="pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity">
-              <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
-            </div>
+            <img src="https://i.ytimg.com/vi/66hXt4XtQkc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC839IeC2X6-laSawppcBvqCmMKVQ" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" referrerpolicy="no-referrer">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity pointer-events-none"></div>
             <div class="absolute bottom-4 left-4 right-4 pointer-events-none">
               <h3 class="text-sm font-bold uppercase tracking-wide group-hover:text-red-500 transition-colors truncate">The Vault: Season 1</h3>
@@ -302,11 +286,11 @@
       <div class="max-w-7xl mx-auto flex flex-col md:row justify-between gap-12">
         <div class="space-y-6">
           <div class="text-xl font-display font-extrabold tracking-tighter text-white flex items-center gap-1">
-            <span class="bg-red-600 px-1.5 py-0.5 rounded-sm">VÄKEVÄ</span>
+            <span class="bg-red-600 px-1.5 py-0.5 rounded-sm">SUOMI</span>
             <span class="text-xs font-medium tracking-widest opacity-80 uppercase">MMA</span>
           </div>
           <p class="text-sm text-white/40 max-w-xs leading-relaxed">
-            Väkevä MMA is the premier destination for mixed martial arts content. Stream live events and explore our massive fight library.
+            SUOMI MMA is the premier destination for mixed martial arts content. Stream live events and explore our massive fight library.
           </p>
         </div>
       </div>
@@ -321,7 +305,22 @@
           Close <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
         </a>
         <div style="padding-bottom:56.25%; position:relative; width: 100%">
-          <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
+          <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/1/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
+        </div>
+        <div class="p-6 md:p-8 bg-zinc-900 border-t border-white/5">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+            <div>
+              <h2 class="text-2xl font-display font-bold text-white uppercase tracking-tight">UFC 327 ┃ Procházka vs. Ulberg ┃ Main card</h2>
+              <p class="text-red-500 font-bold text-sm uppercase tracking-widest">11.4.2026 Kaseya Center, Miami</p>
+            </div>
+            <div class="flex gap-2">
+              <span class="px-3 py-1 bg-white/5 rounded text-[10px] font-bold uppercase tracking-wider text-white/60 border border-white/10">HD</span>
+              <span class="px-3 py-1 bg-white/5 rounded text-[10px] font-bold uppercase tracking-wider text-white/60 border border-white/10">Live</span>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed max-w-3xl">
+            UFC 327: Procházka vs. Ulberg was a mixed martial arts event produced by the Ultimate Fighting Championship that took place on April 11, 2026, at the Kaseya Center in Miami, Florida.
+          </p>
         </div>
       </div>
     </div>
@@ -333,7 +332,21 @@
           Close <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
         </a>
         <div style="padding-bottom:56.25%; position:relative; width: 100%">
-          <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
+          <iframe width="100%" height="100%" src="https://manifest-gcp-us-east4-vop1.fastly.mux.com/bM6AZCyhoTJG02pmkrhe6yY5vKwW010153hMKnYn3rpp3w2ERdkSbZesmtC66K8Solf01b8YBFJfXxjZg5cBYwFkQqCoE1Qnq6Yi/rendition.m3u8?cdn=fastly&exclude_pdt=false&expires=1776135600&skid=default&signature=NjlkZGEzZDVfY2ZkODkxOTI2YTYyN2FhNWY0OWQ1NDY0MDE0M2U3MTRkNjYzZTA5MjEyYTNjZGE3ZDBhOTJjMGIxNDk2MDQyNw==" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
+        </div>
+        <div class="p-6 md:p-8 bg-zinc-900 border-t border-white/5">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+            <div>
+              <h2 class="text-2xl font-display font-bold text-white uppercase tracking-tight">Ice Cage 6 ┃ Abdul Hussein VS Tyson Nam</h2>
+              <p class="text-red-500 font-bold text-sm uppercase tracking-widest">26.12.2025 Metro Areena, Espoo</p>
+            </div>
+            <div class="flex gap-2">
+              <span class="px-3 py-1 bg-white/5 rounded text-[10px] font-bold uppercase tracking-wider text-white/60 border border-white/10">HD</span>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed max-w-3xl">
+            ICE CAGE 6 jatkoi suositun tapahtumasarjan vahvaa linjaa ja toi jälleen yhteen kamppailu-urheilun ystävät eri puolilta Suomea. Ilta tarjosi yleisölle useita intensiivisiä otteluita ja näyttävän kokonaisuuden, jossa tunnelma pysyi korkealla alusta loppuun.
+          </p>
         </div>
       </div>
     </div>
@@ -345,7 +358,21 @@
           Close <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
         </a>
         <div style="padding-bottom:56.25%; position:relative; width: 100%">
-          <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
+          <iframe width="100%" height="100%" src="https://manifest-gcp-us-east4-vop1.edgemv.mux.com/qvTo00WaqjCyW02Fe55OoU8QQzO7OJxEnTPwMqfWFJr1Lh37IFhfNMrA02ttzcdbpPznf9NiTuuXoFJvxoKWZErzsPsp01ku4V24/rendition.m3u8?cdn=edgemv&expires=1776132000&skid=edgemv-default-1&signature=NjlkZDlmYTBfZWU0MDU0ZTQ5NGU0MmVkYmJlYWM4NGFiODQzMDJkZjljMmI1MmQzOWQ1ZDcxMTlmMjBhYTM4MDM5ZTdlY2Y3Mw==" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
+        </div>
+        <div class="p-6 md:p-8 bg-zinc-900 border-t border-white/5">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+            <div>
+              <h2 class="text-2xl font-display font-bold text-white uppercase tracking-tight">Ice Cage 5 ┃ MAKWAN AMIRKHANI VS Theo Kolehmainen</h2>
+              <p class="text-red-500 font-bold text-sm uppercase tracking-widest">6.9.2025 GATORADE CENTER, TURKU</p>
+            </div>
+            <div class="flex gap-2">
+              <span class="px-3 py-1 bg-white/5 rounded text-[10px] font-bold uppercase tracking-wider text-white/60 border border-white/10">4K</span>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed max-w-3xl">
+            Illan pääottelussa nähtiin suomalaisen vapaaottelun odotettu kohtaaminen, kun Makwan “Mr. Finland” Amirkhani kohtasi Theo “Ei Leiki” Kolehmaisen. Molemmat ottelijat olivat entuudestaan tuttuja ICE CAGE -tapahtumista ja nauttivat vahvaa kannatusta yleisön keskuudessa. Kohtaaminen kehässä oli heidän ensimmäisensä, ja se herätti runsaasti ennakkokiinnostusta.
+          </p>
         </div>
       </div>
     </div>
@@ -359,6 +386,17 @@
         <div style="padding-bottom:56.25%; position:relative; width: 100%">
           <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
         </div>
+        <div class="p-6 md:p-8 bg-zinc-900 border-t border-white/5">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+            <div>
+              <h2 class="text-2xl font-display font-bold text-white uppercase tracking-tight">Leo Tanaka vs. David Miller</h2>
+              <p class="text-red-500 font-bold text-sm uppercase tracking-widest">Lightweight Showdown</p>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed max-w-3xl">
+            A technical masterclass between two of the most creative strikers in the division. Tanaka's traditional karate style faces off against Miller's unorthodox kickboxing. A true chess match inside the cage.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -370,6 +408,17 @@
         </a>
         <div style="padding-bottom:56.25%; position:relative; width: 100%">
           <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
+        </div>
+        <div class="p-6 md:p-8 bg-zinc-900 border-t border-white/5">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+            <div>
+              <h2 class="text-2xl font-display font-bold text-white uppercase tracking-tight">Submission Underground: Grappling Masters</h2>
+              <p class="text-red-500 font-bold text-sm uppercase tracking-widest">Special Event | No-Gi Invitational</p>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed max-w-3xl">
+            The world's best grapplers meet under the Väkevä MMA banner for a night of pure submission artistry. No-gi rules, sub-only format. Watch as legends of the mat test their skills in the ultimate proving ground.
+          </p>
         </div>
       </div>
     </div>
@@ -383,6 +432,17 @@
         <div style="padding-bottom:56.25%; position:relative; width: 100%">
           <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
         </div>
+        <div class="p-6 md:p-8 bg-zinc-900 border-t border-white/5">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+            <div>
+              <h2 class="text-2xl font-display font-bold text-white uppercase tracking-tight">Road to Glory: Tournament Finals</h2>
+              <p class="text-red-500 font-bold text-sm uppercase tracking-widest">Season Finale | Stockholm</p>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed max-w-3xl">
+            The culmination of a year-long journey. The final two prospects battle for a life-changing contract and the title of Road to Glory Champion. Witness the birth of the next MMA superstar.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -394,6 +454,17 @@
         </a>
         <div style="padding-bottom:56.25%; position:relative; width: 100%">
           <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
+        </div>
+        <div class="p-6 md:p-8 bg-zinc-900 border-t border-white/5">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+            <div>
+              <h2 class="text-2xl font-display font-bold text-white uppercase tracking-tight">Greatest Knockouts: Best of 2025</h2>
+              <p class="text-red-500 font-bold text-sm uppercase tracking-widest">Archive Collection | Highlights</p>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed max-w-3xl">
+            Relive the most explosive moments from the past year. From perfectly timed counter-punches to devastating head kicks, this collection features every knockout that left the crowd in awe in 2025.
+          </p>
         </div>
       </div>
     </div>
@@ -407,6 +478,17 @@
         <div style="padding-bottom:56.25%; position:relative; width: 100%">
           <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
         </div>
+        <div class="p-6 md:p-8 bg-zinc-900 border-t border-white/5">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+            <div>
+              <h2 class="text-2xl font-display font-bold text-white uppercase tracking-tight">Submission Specialists: Technical Masterclass</h2>
+              <p class="text-red-500 font-bold text-sm uppercase tracking-widest">Instructional Series | BJJ & Sambo</p>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed max-w-3xl">
+            Go deep into the mechanics of the world's most effective submissions. Our experts break down the setups, transitions, and finishes that make these grapplers so dangerous on the ground.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -418,6 +500,17 @@
         </a>
         <div style="padding-bottom:56.25%; position:relative; width: 100%">
           <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
+        </div>
+        <div class="p-6 md:p-8 bg-zinc-900 border-t border-white/5">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+            <div>
+              <h2 class="text-2xl font-display font-bold text-white uppercase tracking-tight">Title Defense: Heavyweight Championship</h2>
+              <p class="text-red-500 font-bold text-sm uppercase tracking-widest">Championship Bout | Las Vegas</p>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed max-w-3xl">
+            The heavyweight throne is on the line. Witness a clash of titans as the reigning champion faces the #1 contender in a battle for supremacy. Five rounds of pure adrenaline.
+          </p>
         </div>
       </div>
     </div>
@@ -431,6 +524,17 @@
         <div style="padding-bottom:56.25%; position:relative; width: 100%">
           <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
         </div>
+        <div class="p-6 md:p-8 bg-zinc-900 border-t border-white/5">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+            <div>
+              <h2 class="text-2xl font-display font-bold text-white uppercase tracking-tight">Underground Fights: Raw Intensity</h2>
+              <p class="text-red-500 font-bold text-sm uppercase tracking-widest">Unsanctioned Series | London</p>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed max-w-3xl">
+            No lights, no cameras, just pure fighting. The Underground Series takes you back to the roots of MMA with raw, unfiltered combat from secret locations around the globe.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -442,6 +546,17 @@
         </a>
         <div style="padding-bottom:56.25%; position:relative; width: 100%">
           <iframe width="100%" height="100%" src="https://dailywrestling.cc/embed/cfu/4-11-2026/select-post-1/4/1" frameborder="0" allowfullscreen="" scrolling="no" style="position:absolute; top:0; left: 0"></iframe>
+        </div>
+        <div class="p-6 md:p-8 bg-zinc-900 border-t border-white/5">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+            <div>
+              <h2 class="text-2xl font-display font-bold text-white uppercase tracking-tight">The Vault: Classic Encounters</h2>
+              <p class="text-red-500 font-bold text-sm uppercase tracking-widest">Historical Series | Season 1</p>
+            </div>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed max-w-3xl">
+            Journey back to the early days of Väkevä MMA. These are the fights that built our legacy. Remastered and presented in their entirety for the first time.
+          </p>
         </div>
       </div>
     </div>
